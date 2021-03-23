@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "github.com/rivory/gogrpcvshttp/service";
+
+package service;
+
+service Service {
+  rpc Handle(HelloWorld) returns (HelloWorld) {}
+}
+
+message HelloWorld {
+  string message = 1;
+}

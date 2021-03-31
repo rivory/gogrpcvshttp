@@ -20,6 +20,13 @@ It also includes a `benchmark_test.go` which benchmark the same usage case for b
 make bench
 ```
 
+To recompile protobuf services definition
+```
+protoc --go_out=. --go_opt=paths=source_relative \
+    --go-grpc_out=. --go-grpc_opt=paths=source_relative \
+    pkg/proto/service.proto
+```
+
 
 Few run from local env : 
 
